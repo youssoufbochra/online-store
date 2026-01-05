@@ -1,0 +1,124 @@
+version: '3'
+
+services:
+  # Base de datos MySQL compartida
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 10
+    networks:
+      - online-store-network
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  # Servidor Eureka
+  eureka-server:
+    build: eureka-server
+    mem_limit: 512m
+    ports:
+      - "8761:8761"
+    restart: always
+    networks:
+      - online-store-network
+
+  # API Gateway
+  api-gateway:
+    build: api-gateway
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      - eureka-server
+    networks:
+      - online-store-network
+
+  # Products Service
+  products-service:
+    build: products-service
+    mem_limit: 512m
+    ports:
+      - "8082:8082"
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/products_service?createDatabaseIfNotExist=true&serverTimezone=UTC
+      DB_USERNAME: root
+      DB_PASSWORD: root123
+    restart: always
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    networks:
+      - online-store-network
+
+  # Users Service
+  users-service:
+    build: users-service
+    mem_limit: 512m
+    ports:
+      - "8084:8084"
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/users_service?createDatabaseIfNotExist=true&serverTimezone=UTC
+      DB_USERNAME: root
+      DB_PASSWORD: root123
+    restart: always
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    networks:
+      - online-store-network
+
+  # Shopping Cart Service
+  shopping-cart-service:
+    build: shopping-cart-service
+    mem_limit: 512m
+    ports:
+      - "8085:8085"
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/shopping_carts_service?createDatabaseIfNotExist=true&serverTimezone=UTC
+      DB_USERNAME: root
+      DB_PASSWORD: root123
+    restart: always
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    networks:
+      - online-store-network
+
+  # Sales Service
+  sales-service:
+    build: sales-service
+    mem_limit: 512m
+    ports:
+      - "8086:8086"
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/sales_service?createDatabaseIfNotExist=true&serverTimezone=UTC
+      DB_USERNAME: root
+      DB_PASSWORD: root123
+    restart: always
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    networks:
+      - online-store-network
+
+networks:
+  online-store-network:
+
+volumes:
+  mysql-data:
