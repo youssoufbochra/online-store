@@ -2,6 +2,8 @@
 
 # 🛒 Online Store
 
+<br>
+
 ## Descripción General
 
 Este proyecto es una **tienda online de electrodomésticos** desarrollada utilizando una **arquitectura de microservicios**.  
@@ -15,6 +17,8 @@ Cada microservicio cuenta con su propio repositorio y documentación detallada.
 > 📌 El proyecto corresponde exclusivamente al **backend** y se ejecuta en un **entorno local**.
 
 ---
+
+<br>
 
 ## Arquitectura General
 
@@ -32,6 +36,8 @@ Características principales de la arquitectura:
 
 ---
 
+<br>
+
 ## Microservicios
 
 | Microservicio | Responsabilidad | Repositorio |
@@ -47,6 +53,8 @@ Características principales de la arquitectura:
 Cada microservicio posee su propio repositorio con documentación técnica detallada.
 
 ---
+
+<br>
 
 ## API Gateway
 
@@ -64,6 +72,8 @@ En esta etapa, el gateway se utiliza únicamente para enrutamiento, dejando abie
 
 ---
 
+<br>
+
 ## Tecnologías Utilizadas
 
 - **Java 17**
@@ -78,6 +88,8 @@ En esta etapa, el gateway se utiliza únicamente para enrutamiento, dejando abie
 
 ---
 
+<br>
+
 ## Gestión de Configuración
 
 La configuración de los microservicios se maneja de forma centralizada mediante **Spring Cloud Config Server**.
@@ -87,6 +99,8 @@ La configuración de los microservicios se maneja de forma centralizada mediante
 - Permite escalabilidad y consistencia entre servicios
 
 ---
+
+<br>
 
 ## Ejecución Local
 
@@ -100,10 +114,14 @@ Este enfoque permite levantar toda la arquitectura de microservicios de forma in
 - Microservicios de negocio  
 - Bases de datos asociadas a cada microservicio  
 
+<br>
+
 ### Requisitos previos
 
 - Git
 - Docker
+
+<br>
 
 ### Ejecución del sistema
 
