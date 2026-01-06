@@ -42,10 +42,10 @@ Key architectural characteristics:
 
 | Microservice | Responsibility | Repository |
 |--------------|----------------|------------|
-| users-service | User management | 🔗 [link](https://github.com/matias-devv/online-store-users-service) |
-| products-service | Product catalog | 🔗 [link](https://github.com/matias-devv/online-store-products-service) |
 | shopping-cart-service | Shopping cart management | 🔗 [link](https://github.com/matias-devv/online-store-shopping-carts-service) |
 | sales-service | Sales processing | 🔗 [link](https://github.com/matias-devv/online-store-sales-service) |
+| users-service | User management | 🔗 [link](https://github.com/matias-devv/online-store-users-service) |
+| products-service | Product catalog | 🔗 [link](https://github.com/matias-devv/online-store-products-service) |
 | api-gateway | Request routing | 🔗 [link](https://github.com/matias-devv/online-store-api-gateway) |
 | eureka-server | Service registry and discovery | 🔗 [link](https://github.com/matias-devv/online-store-eureka-server) |
 | config-server | Centralized configuration | 🔗 [link](https://github.com/matias-devv/online-store-config-server) |
